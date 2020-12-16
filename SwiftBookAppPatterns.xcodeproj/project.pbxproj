@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D212589DF6800C836A2 /* AppDelegate.swift */; };
 		FFB94D242589DF6800C836A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D232589DF6800C836A2 /* SceneDelegate.swift */; };
-		FFB94D262589DF6800C836A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D252589DF6800C836A2 /* ViewController.swift */; };
+		FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D252589DF6800C836A2 /* CourseListViewController.swift */; };
 		FFB94D292589DF6800C836A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB94D272589DF6800C836A2 /* Main.storyboard */; };
 		FFB94D2B2589DF6800C836A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB94D2A2589DF6800C836A2 /* Assets.xcassets */; };
 		FFB94D2E2589DF6800C836A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB94D2C2589DF6800C836A2 /* LaunchScreen.storyboard */; };
+		FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */; };
+		FFB94D482589F88A00C836A2 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D472589F88A00C836A2 /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFB94D1E2589DF6800C836A2 /* SwiftBookAppPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBookAppPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB94D212589DF6800C836A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB94D232589DF6800C836A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFB94D252589DF6800C836A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFB94D252589DF6800C836A2 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		FFB94D282589DF6800C836A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB94D2A2589DF6800C836A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB94D2D2589DF6800C836A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB94D2F2589DF6800C836A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		FFB94D472589F88A00C836A2 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		FFB94D202589DF6800C836A2 /* SwiftBookAppPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				FFB94D212589DF6800C836A2 /* AppDelegate.swift */,
-				FFB94D232589DF6800C836A2 /* SceneDelegate.swift */,
-				FFB94D252589DF6800C836A2 /* ViewController.swift */,
-				FFB94D272589DF6800C836A2 /* Main.storyboard */,
-				FFB94D2A2589DF6800C836A2 /* Assets.xcassets */,
-				FFB94D2C2589DF6800C836A2 /* LaunchScreen.storyboard */,
-				FFB94D2F2589DF6800C836A2 /* Info.plist */,
+				FFB94D372589E09C00C836A2 /* Storyboards */,
+				FFB94D362589E07D00C836A2 /* Models */,
+				FFB94D382589E0AD00C836A2 /* ViewControllers */,
+				FFB94D3B2589E0D900C836A2 /* SupportingFiles */,
+				FFB94D3A2589E0C700C836A2 /* Sources */,
 			);
 			path = SwiftBookAppPatterns;
+			sourceTree = "<group>";
+		};
+		FFB94D362589E07D00C836A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D472589F88A00C836A2 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFB94D372589E09C00C836A2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D2C2589DF6800C836A2 /* LaunchScreen.storyboard */,
+				FFB94D272589DF6800C836A2 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FFB94D382589E0AD00C836A2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D252589DF6800C836A2 /* CourseListViewController.swift */,
+				FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FFB94D3A2589E0C700C836A2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D2A2589DF6800C836A2 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FFB94D3B2589E0D900C836A2 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D212589DF6800C836A2 /* AppDelegate.swift */,
+				FFB94D232589DF6800C836A2 /* SceneDelegate.swift */,
+				FFB94D2F2589DF6800C836A2 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB94D262589DF6800C836A2 /* ViewController.swift in Sources */,
+				FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */,
 				FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */,
+				FFB94D482589F88A00C836A2 /* Course.swift in Sources */,
+				FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */,
 				FFB94D242589DF6800C836A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JBMRXJPY8V;
-				INFOPLIST_FILE = SwiftBookAppPatterns/Info.plist;
+				INFOPLIST_FILE = SwiftBookAppPatterns/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JBMRXJPY8V;
-				INFOPLIST_FILE = SwiftBookAppPatterns/Info.plist;
+				INFOPLIST_FILE = SwiftBookAppPatterns/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
