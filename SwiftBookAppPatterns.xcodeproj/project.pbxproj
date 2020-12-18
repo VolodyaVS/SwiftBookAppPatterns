@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB0258CAE4300BA12CB /* DataManager.swift */; };
+		FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */; };
 		FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D212589DF6800C836A2 /* AppDelegate.swift */; };
 		FFB94D242589DF6800C836A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D232589DF6800C836A2 /* SceneDelegate.swift */; };
 		FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D252589DF6800C836A2 /* CourseListViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF760FB0258CAE4300BA12CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFB94D1E2589DF6800C836A2 /* SwiftBookAppPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBookAppPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB94D212589DF6800C836A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB94D232589DF6800C836A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF760FAF258CAE2B00BA12CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF760FB0258CAE4300BA12CB /* DataManager.swift */,
+				FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FFB94D152589DF6800C836A2 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +73,10 @@
 		FFB94D202589DF6800C836A2 /* SwiftBookAppPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				FFB94D372589E09C00C836A2 /* Storyboards */,
 				FFB94D362589E07D00C836A2 /* Models */,
 				FFB94D382589E0AD00C836A2 /* ViewControllers */,
+				FFB94D372589E09C00C836A2 /* Storyboards */,
+				FF760FAF258CAE2B00BA12CB /* Services */,
 				FFB94D3B2589E0D900C836A2 /* SupportingFiles */,
 				FFB94D3A2589E0C700C836A2 /* Sources */,
 			);
@@ -184,7 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */,
+				FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */,
 				FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */,
+				FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */,
 				FFB94D482589F88A00C836A2 /* Course.swift in Sources */,
 				FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */,
 				FFB94D242589DF6800C836A2 /* SceneDelegate.swift in Sources */,
