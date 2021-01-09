@@ -16,8 +16,13 @@ class CourseListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
-        getCourses()
         setupNavigationBar()
+        getCourses()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! CourseDetailsViewController
+        detailVC.course = sender as? Course
     }
     
     private func getCourses() {
@@ -64,3 +69,12 @@ extension CourseListViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension CourseListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let course = courses[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: course)
+    }
+}

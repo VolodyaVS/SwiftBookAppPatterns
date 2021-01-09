@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF729CC825A9C88E00CADE9A /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */; };
+		FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CCB25A9F74900CADE9A /* ImageManager.swift */; };
 		FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB0258CAE4300BA12CB /* DataManager.swift */; };
 		FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */; };
 		FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D212589DF6800C836A2 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		FF729CCB25A9F74900CADE9A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		FF760FB0258CAE4300BA12CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFB94D1E2589DF6800C836A2 /* SwiftBookAppPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBookAppPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				FF760FB0258CAE4300BA12CB /* DataManager.swift */,
+				FF729CCB25A9F74900CADE9A /* ImageManager.swift */,
 				FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */,
 			);
 			path = Services;
@@ -211,6 +214,7 @@
 				FF729CC825A9C88E00CADE9A /* CourseTableViewCell.swift in Sources */,
 				FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */,
 				FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */,
+				FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */,
 				FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */,
 				FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */,
 				FFB94D482589F88A00C836A2 /* Course.swift in Sources */,

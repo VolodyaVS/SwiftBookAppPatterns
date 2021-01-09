@@ -25,9 +25,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="gND-Ex-OhP" kind="show" identifier="showDetails" id="Wzt-40-Efp"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,6 +35,7 @@
                     <navigationItem key="navigationItem" title="Courses" id="Ga3-ht-D7y"/>
                     <connections>
                         <outlet property="tableView" destination="J54-MP-AXT" id="hbn-0X-D8K"/>
+                        <segue destination="gND-Ex-OhP" kind="show" identifier="showDetails" id="uCe-ui-2BP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a29-44-EVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,6 +91,9 @@
                                 <state key="normal" image="heart.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="gND-Ex-OhP" eventType="touchUpInside" id="LDo-3M-aHI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uRw-Ee-q2P"/>
@@ -113,6 +114,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bUJ-we-Ety"/>
+                    <connections>
+                        <outlet property="courseImage" destination="nWb-On-UbB" id="z3E-KO-eeq"/>
+                        <outlet property="courseNameLabel" destination="rgb-yj-7Me" id="Cd4-wl-WoN"/>
+                        <outlet property="favoriteButton" destination="TV4-RG-XJk" id="tql-Lw-JLS"/>
+                        <outlet property="numberOfLessonsLabel" destination="ENf-fQ-W1U" id="tPA-Dv-iPF"/>
+                        <outlet property="numberOfTestsLabel" destination="KCI-jR-Jjl" id="eNr-YD-Ul1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVC-jd-jwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
