@@ -22,7 +22,7 @@ class CourseDetailsViewController: UIViewController {
     // MARK: - Private Properties
     private var isFavorite = false
     
-    // MARK: - Ovveride Methods
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         loadFavoriteStatus()
@@ -36,7 +36,7 @@ class CourseDetailsViewController: UIViewController {
         DataManager.shared.saveFavoriteStatus(for: course.name ?? "", with: isFavorite)
     }
     
-    // MARK: - Public Methods
+    // MARK: - Private Methods
     private func setImageForFavoriteButton() {
         favoriteButton.tintColor = isFavorite ? .red : .gray
     }
