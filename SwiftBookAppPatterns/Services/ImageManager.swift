@@ -12,8 +12,8 @@ class ImageManager {
     
     private init() {}
     
-    func getImageData(from stringURL: String?) -> Data? {
-        guard let stringURL = stringURL else { return nil }
+    func getImageData(from url: String?) -> Data? {
+        guard let stringURL = url else { return nil }
         guard let imageURL = URL(string: stringURL) else { return nil }
         guard let imageData = try? Data(contentsOf: imageURL) else { return nil }
         
