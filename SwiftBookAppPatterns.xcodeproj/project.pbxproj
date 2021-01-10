@@ -10,6 +10,8 @@
 		FF729CC825A9C88E00CADE9A /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */; };
 		FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CCB25A9F74900CADE9A /* ImageManager.swift */; };
 		FF729CD625AB243F00CADE9A /* CourseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CD525AB243F00CADE9A /* CourseDetailsViewModel.swift */; };
+		FF729CDC25AB3E5E00CADE9A /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CDB25AB3E5E00CADE9A /* CourseListViewModel.swift */; };
+		FF729CE225AB486600CADE9A /* CourseTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CE125AB486600CADE9A /* CourseTableViewCellViewModel.swift */; };
 		FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB0258CAE4300BA12CB /* DataManager.swift */; };
 		FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */; };
 		FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D212589DF6800C836A2 /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 		FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		FF729CCB25A9F74900CADE9A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		FF729CD525AB243F00CADE9A /* CourseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModel.swift; sourceTree = "<group>"; };
+		FF729CDB25AB3E5E00CADE9A /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
+		FF729CE125AB486600CADE9A /* CourseTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		FF760FB0258CAE4300BA12CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFB94D1E2589DF6800C836A2 /* SwiftBookAppPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBookAppPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,12 +55,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF729CC625A9C85B00CADE9A /* Views */ = {
+		FF729CC625A9C85B00CADE9A /* CourseTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */,
+				FF729CE125AB486600CADE9A /* CourseTableViewCellViewModel.swift */,
 			);
-			path = Views;
+			path = CourseTableViewCell;
 			sourceTree = "<group>";
 		};
 		FF729CD425AB22E400CADE9A /* CourseDetails */ = {
@@ -97,11 +102,10 @@
 		FFB94D202589DF6800C836A2 /* SwiftBookAppPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				FF729CD425AB22E400CADE9A /* CourseDetails */,
 				FFB94D362589E07D00C836A2 /* Models */,
-				FFB94D382589E0AD00C836A2 /* ViewControllers */,
+				FFB94D382589E0AD00C836A2 /* CourseList */,
+				FF729CD425AB22E400CADE9A /* CourseDetails */,
 				FFB94D372589E09C00C836A2 /* Storyboards */,
-				FF729CC625A9C85B00CADE9A /* Views */,
 				FF760FAF258CAE2B00BA12CB /* Services */,
 				FFB94D3B2589E0D900C836A2 /* SupportingFiles */,
 				FFB94D3A2589E0C700C836A2 /* Sources */,
@@ -126,12 +130,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FFB94D382589E0AD00C836A2 /* ViewControllers */ = {
+		FFB94D382589E0AD00C836A2 /* CourseList */ = {
 			isa = PBXGroup;
 			children = (
+				FF729CC625A9C85B00CADE9A /* CourseTableViewCell */,
 				FFB94D252589DF6800C836A2 /* CourseListViewController.swift */,
+				FF729CDB25AB3E5E00CADE9A /* CourseListViewModel.swift */,
 			);
-			path = ViewControllers;
+			path = CourseList;
 			sourceTree = "<group>";
 		};
 		FFB94D3A2589E0C700C836A2 /* Sources */ = {
@@ -228,7 +234,9 @@
 				FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */,
 				FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */,
 				FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */,
+				FF729CE225AB486600CADE9A /* CourseTableViewCellViewModel.swift in Sources */,
 				FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */,
+				FF729CDC25AB3E5E00CADE9A /* CourseListViewModel.swift in Sources */,
 				FFB94D482589F88A00C836A2 /* Course.swift in Sources */,
 				FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */,
 				FFB94D242589DF6800C836A2 /* SceneDelegate.swift in Sources */,

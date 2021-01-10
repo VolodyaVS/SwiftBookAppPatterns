@@ -17,22 +17,12 @@ class CourseDetailsViewController: UIViewController {
     @IBOutlet private var numberOfTestsLabel: UILabel!
     
     // MARK: - Public Properties
-    var course: Course!
-    var viewModel: CourseDetailsViewModelProtocol! {
-        didSet {
-            courseNameLabel.text = viewModel.courseName
-            numberOfLessonsLabel.text = viewModel.numberOfLessons
-            numberOfTestsLabel.text = viewModel.numberOfTests
-            
-            guard let imageData = viewModel.imageData else { return }
-            courseImage.image = UIImage(data: imageData)
-        }
-    }
+    var viewModel: CourseDetailsViewModelProtocol!
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CourseDetailsViewModel(course: course)
+        setupUI()
         setImageForFavoriteButton()
     }
     
@@ -45,6 +35,15 @@ class CourseDetailsViewController: UIViewController {
     // MARK: - Private Methods
     private func setImageForFavoriteButton() {
         favoriteButton.tintColor = viewModel.isFavorite ? .red : .gray
+    }
+    
+    private func setupUI() {
+        courseNameLabel.text = viewModel.courseName
+        numberOfLessonsLabel.text = viewModel.numberOfLessons
+        numberOfTestsLabel.text = viewModel.numberOfTests
+        
+        guard let imageData = viewModel.imageData else { return }
+        courseImage.image = UIImage(data: imageData)
     }
     
 }

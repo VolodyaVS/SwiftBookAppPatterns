@@ -32,7 +32,7 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     }
     
     var imageData: Data? {
-        ImageManager.shared.getImageData(from: course.imageUrl) ?? Data()
+        ImageManager.shared.getImageData(from: course.imageUrl)
     }
     
     var isFavorite: Bool {
