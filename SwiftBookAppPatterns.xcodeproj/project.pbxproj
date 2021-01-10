@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF729CC825A9C88E00CADE9A /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */; };
 		FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CCB25A9F74900CADE9A /* ImageManager.swift */; };
+		FF729CD625AB243F00CADE9A /* CourseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF729CD525AB243F00CADE9A /* CourseDetailsViewModel.swift */; };
 		FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB0258CAE4300BA12CB /* DataManager.swift */; };
 		FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */; };
 		FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D212589DF6800C836A2 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		FF729CC725A9C88E00CADE9A /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		FF729CCB25A9F74900CADE9A /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		FF729CD525AB243F00CADE9A /* CourseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModel.swift; sourceTree = "<group>"; };
 		FF760FB0258CAE4300BA12CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FF760FB4258CFC7A00BA12CB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFB94D1E2589DF6800C836A2 /* SwiftBookAppPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBookAppPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FF729CD425AB22E400CADE9A /* CourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */,
+				FF729CD525AB243F00CADE9A /* CourseDetailsViewModel.swift */,
+			);
+			path = CourseDetails;
+			sourceTree = "<group>";
+		};
 		FF760FAF258CAE2B00BA12CB /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +97,7 @@
 		FFB94D202589DF6800C836A2 /* SwiftBookAppPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				FF729CD425AB22E400CADE9A /* CourseDetails */,
 				FFB94D362589E07D00C836A2 /* Models */,
 				FFB94D382589E0AD00C836A2 /* ViewControllers */,
 				FFB94D372589E09C00C836A2 /* Storyboards */,
@@ -118,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				FFB94D252589DF6800C836A2 /* CourseListViewController.swift */,
-				FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF729CD625AB243F00CADE9A /* CourseDetailsViewModel.swift in Sources */,
 				FF729CC825A9C88E00CADE9A /* CourseTableViewCell.swift in Sources */,
 				FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */,
 				FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */,

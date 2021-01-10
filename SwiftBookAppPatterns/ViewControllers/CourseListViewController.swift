@@ -13,6 +13,7 @@ class CourseListViewController: UIViewController {
     
     private var courses: [Course] = []
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
@@ -25,6 +26,7 @@ class CourseListViewController: UIViewController {
         detailVC.course = sender as? Course
     }
     
+    // MARK: - Private Methods
     private func getCourses() {
         NetworkManager.shared.fetchData { (courses) in
             self.courses = courses
