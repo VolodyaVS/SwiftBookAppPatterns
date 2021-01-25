@@ -19,6 +19,9 @@ class CourseDetailsViewController: UIViewController {
     // MARK: - Public Properties
     var viewModel: CourseDetailsViewModelProtocol!
     
+    // MARK: - Private Properties
+    private var isFavorite = false
+    
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +31,23 @@ class CourseDetailsViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func toggleFavorite(_ sender: UIButton) {
-        viewModel.isFavorite.toggle()
+        viewModel.changeFavoriteStatus()
         setImageForFavoriteButton()
     }
     
     // MARK: - Private Methods
     private func setImageForFavoriteButton() {
-        favoriteButton.tintColor = viewModel.isFavorite ? .red : .gray
+        favoriteButton.tintColor = isFavorite ? .red : .gray
     }
     
     private func setupUI() {
+        viewModel.viewModelDidChange = { [unowned self] viewModel in
+            self.isFavorite = viewModel.isFavorite
+        }
+        
+        viewModel.setFavoriteStatus()
+        isFavorite = viewModel.isFavorite
+        
         courseNameLabel.text = viewModel.courseName
         numberOfLessonsLabel.text = viewModel.numberOfLessons
         numberOfTestsLabel.text = viewModel.numberOfTests
