@@ -22,6 +22,7 @@
 		FFB94D2E2589DF6800C836A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB94D2C2589DF6800C836A2 /* LaunchScreen.storyboard */; };
 		FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */; };
 		FFB94D482589F88A00C836A2 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D472589F88A00C836A2 /* Course.swift */; };
+		FFCCDC8B25C15F3C004A0748 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCCDC8A25C15F3C004A0748 /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FFB94D2F2589DF6800C836A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		FFB94D472589F88A00C836A2 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FFCCDC8A25C15F3C004A0748 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		FFB94D202589DF6800C836A2 /* SwiftBookAppPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				FFCCDC8925C15F2C004A0748 /* Helpers */,
 				FFB94D362589E07D00C836A2 /* Models */,
 				FFB94D382589E0AD00C836A2 /* CourseList */,
 				FF729CD425AB22E400CADE9A /* CourseDetails */,
@@ -156,6 +159,14 @@
 				FFB94D2F2589DF6800C836A2 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FFCCDC8925C15F2C004A0748 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FFCCDC8A25C15F3C004A0748 /* Box.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */,
 				FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */,
 				FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */,
+				FFCCDC8B25C15F3C004A0748 /* Box.swift in Sources */,
 				FF729CE225AB486600CADE9A /* CourseTableViewCellViewModel.swift in Sources */,
 				FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */,
 				FF729CDC25AB3E5E00CADE9A /* CourseListViewModel.swift in Sources */,
