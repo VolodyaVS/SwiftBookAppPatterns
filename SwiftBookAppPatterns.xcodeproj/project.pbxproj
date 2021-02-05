@@ -19,6 +19,13 @@
 		FFB94D2E2589DF6800C836A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB94D2C2589DF6800C836A2 /* LaunchScreen.storyboard */; };
 		FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */; };
 		FFB94D482589F88A00C836A2 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB94D472589F88A00C836A2 /* Course.swift */; };
+		FFD650BE25CC31AE0014015D /* CourseDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650BD25CC31AE0014015D /* CourseDetailsPresenter.swift */; };
+		FFD650C225CC31BE0014015D /* CourseDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650C125CC31BE0014015D /* CourseDetailsInteractor.swift */; };
+		FFD650C525CC31CF0014015D /* CourseDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650C425CC31CF0014015D /* CourseDetailsConfigurator.swift */; };
+		FFD650C925CC37510014015D /* CourseListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650C825CC37510014015D /* CourseListPresenter.swift */; };
+		FFD650CC25CC375E0014015D /* CourseListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650CB25CC375E0014015D /* CourseListInteractor.swift */; };
+		FFD650CF25CC37690014015D /* CourseListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650CE25CC37690014015D /* CourseListRouter.swift */; };
+		FFD650D225CC37760014015D /* CourseListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD650D125CC37760014015D /* CourseListConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		FFB94D2F2589DF6800C836A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		FFB94D472589F88A00C836A2 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FFD650BD25CC31AE0014015D /* CourseDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsPresenter.swift; sourceTree = "<group>"; };
+		FFD650C125CC31BE0014015D /* CourseDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsInteractor.swift; sourceTree = "<group>"; };
+		FFD650C425CC31CF0014015D /* CourseDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsConfigurator.swift; sourceTree = "<group>"; };
+		FFD650C825CC37510014015D /* CourseListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListPresenter.swift; sourceTree = "<group>"; };
+		FFD650CB25CC375E0014015D /* CourseListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListInteractor.swift; sourceTree = "<group>"; };
+		FFD650CE25CC37690014015D /* CourseListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListRouter.swift; sourceTree = "<group>"; };
+		FFD650D125CC37760014015D /* CourseListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				FFB94D362589E07D00C836A2 /* Models */,
-				FFB94D382589E0AD00C836A2 /* ViewControllers */,
+				FFD650C725CC37220014015D /* CourseList */,
+				FFD650BC25CC31630014015D /* CourseDetails */,
 				FFB94D372589E09C00C836A2 /* Storyboards */,
 				FF729CC625A9C85B00CADE9A /* Views */,
 				FF760FAF258CAE2B00BA12CB /* Services */,
@@ -114,15 +129,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FFB94D382589E0AD00C836A2 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				FFB94D252589DF6800C836A2 /* CourseListViewController.swift */,
-				FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		FFB94D3A2589E0C700C836A2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +145,29 @@
 				FFB94D2F2589DF6800C836A2 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FFD650BC25CC31630014015D /* CourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D442589F85A00C836A2 /* CourseDetailsViewController.swift */,
+				FFD650BD25CC31AE0014015D /* CourseDetailsPresenter.swift */,
+				FFD650C125CC31BE0014015D /* CourseDetailsInteractor.swift */,
+				FFD650C425CC31CF0014015D /* CourseDetailsConfigurator.swift */,
+			);
+			path = CourseDetails;
+			sourceTree = "<group>";
+		};
+		FFD650C725CC37220014015D /* CourseList */ = {
+			isa = PBXGroup;
+			children = (
+				FFB94D252589DF6800C836A2 /* CourseListViewController.swift */,
+				FFD650C825CC37510014015D /* CourseListPresenter.swift */,
+				FFD650CB25CC375E0014015D /* CourseListInteractor.swift */,
+				FFD650D125CC37760014015D /* CourseListConfigurator.swift */,
+				FFD650CE25CC37690014015D /* CourseListRouter.swift */,
+			);
+			path = CourseList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,14 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD650CF25CC37690014015D /* CourseListRouter.swift in Sources */,
+				FFD650C525CC31CF0014015D /* CourseDetailsConfigurator.swift in Sources */,
 				FF729CC825A9C88E00CADE9A /* CourseTableViewCell.swift in Sources */,
+				FFD650C225CC31BE0014015D /* CourseDetailsInteractor.swift in Sources */,
 				FFB94D262589DF6800C836A2 /* CourseListViewController.swift in Sources */,
 				FF760FB1258CAE4300BA12CB /* DataManager.swift in Sources */,
 				FF729CCC25A9F74900CADE9A /* ImageManager.swift in Sources */,
+				FFD650D225CC37760014015D /* CourseListConfigurator.swift in Sources */,
 				FFB94D222589DF6800C836A2 /* AppDelegate.swift in Sources */,
+				FFD650C925CC37510014015D /* CourseListPresenter.swift in Sources */,
 				FF760FB5258CFC7A00BA12CB /* NetworkManager.swift in Sources */,
 				FFB94D482589F88A00C836A2 /* Course.swift in Sources */,
 				FFB94D452589F85A00C836A2 /* CourseDetailsViewController.swift in Sources */,
+				FFD650CC25CC375E0014015D /* CourseListInteractor.swift in Sources */,
+				FFD650BE25CC31AE0014015D /* CourseDetailsPresenter.swift in Sources */,
 				FFB94D242589DF6800C836A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JBMRXJPY8V;
+				DEVELOPMENT_TEAM = V9KWBFA2B6;
 				INFOPLIST_FILE = SwiftBookAppPatterns/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

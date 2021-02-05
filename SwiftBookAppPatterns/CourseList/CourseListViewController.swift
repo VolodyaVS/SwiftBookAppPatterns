@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CourseListViewController.swift
 //  SwiftBookAppPatterns
 //
 //  Created by Vladimir Stepanchikov on 16.12.2020.
@@ -7,35 +7,49 @@
 
 import UIKit
 
+protocol CourseListViewInputProtocol: class {
+    func reloadData()
+}
+
+protocol CourseListViewOutputProtocol {
+    var coursesCount: Int { get }
+    init(view: CourseListViewInputProtocol)
+    
+    func showCourses()
+    func getCourse(at indexPath: IndexPath) -> Course
+    func showCourseDetails(at indexPath: IndexPath)
+}
+
 class CourseListViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet private var tableView: UITableView!
     
-    private var courses: [Course] = []
+    // MARK: - Public Properties
+    var presenter: CourseListViewOutputProtocol!
+    
+    // MARK: - Private Properties
+    private let configurator: CourseListConfiguratorInputProtocol = CourseListConfigurator()
+    
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
+        
+        configurator.configure(with: self)
+        presenter.showCourses()
+        
         setupNavigationBar()
-        getCourses()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! CourseDetailsViewController
-        detailVC.course = sender as? Course
+        let configurator: CourseDetailsConfiguratorProtocol = CourseDetailsConfigurator()
+        configurator.configure(with: detailVC, and: sender as! Course)
     }
     
     // MARK: - Private Methods
-    private func getCourses() {
-        NetworkManager.shared.fetchData { (courses) in
-            self.courses = courses
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
     private func setupNavigationBar() {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
@@ -55,7 +69,7 @@ extension CourseListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        courses.count
+        presenter.coursesCount
     }
     
     func tableView(_ tableView: UITableView,
@@ -64,8 +78,7 @@ extension CourseListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell",
                                                  for: indexPath) as! CourseTableViewCell
         
-        let course = courses[indexPath.row]
-        cell.configure(for: course)
+        cell.configure(for: presenter.getCourse(at: indexPath))
         
         return cell
     }
@@ -76,7 +89,15 @@ extension CourseListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let course = courses[indexPath.row]
-        performSegue(withIdentifier: "showDetails", sender: course)
+        presenter.showCourseDetails(at: indexPath)
+    }
+}
+
+// MARK: - Input Protocols
+extension CourseListViewController: CourseListViewInputProtocol {
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
