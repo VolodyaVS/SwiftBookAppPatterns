@@ -3,6 +3,7 @@
 //  SwiftBookAppPatterns
 //
 //  Created by Vladimir Stepanchikov on 09.01.2021.
+//  Copyright (c) 2021 Vladimir Stepanchikov. All rights reserved.
 //
 
 import Foundation

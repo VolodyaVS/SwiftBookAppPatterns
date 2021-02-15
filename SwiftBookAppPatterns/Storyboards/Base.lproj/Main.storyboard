@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gND-Ex-OhP" kind="show" identifier="CourseDetails" id="uAX-IS-LIr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,7 +38,6 @@
                     <navigationItem key="navigationItem" title="Courses" id="Ga3-ht-D7y"/>
                     <connections>
                         <outlet property="tableView" destination="J54-MP-AXT" id="hbn-0X-D8K"/>
-                        <segue destination="gND-Ex-OhP" kind="show" identifier="showDetails" id="uCe-ui-2BP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a29-44-EVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

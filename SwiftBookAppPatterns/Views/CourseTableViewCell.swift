@@ -3,15 +3,21 @@
 //  SwiftBookAppPatterns
 //
 //  Created by Vladimir Stepanchikov on 09.01.2021.
+//  Copyright (c) 2021 Vladimir Stepanchikov. All rights reserved.
 //
 
 import UIKit
 
 class CourseTableViewCell: UITableViewCell {
-    func configure(for course: Course) {
-        textLabel?.text = course.name
-        textLabel?.numberOfLines = 2
+    func configure(for course: CourseDisplayedFields) {
+        var content = defaultContentConfiguration()
         
-        imageView?.image = UIImage(data: ImageManager.shared.getImageData(from: course.imageUrl) ?? Data())
+        content.text = course.courseName
+        content.textProperties.numberOfLines = 2
+        
+        guard let imageData = course.imageData else { return }
+        content.image = UIImage(data: imageData)
+        
+        contentConfiguration = content
     }
 }

@@ -2,7 +2,7 @@
 //  NetworkManager.swift
 //  SwiftBookAppPatterns
 //
-//  Created by Vladimir Stepanchikov on 18.12.2020.
+//  Copyright (c) 2021 Vladimir Stepanchikov. All rights reserved.
 //
 
 import Foundation
